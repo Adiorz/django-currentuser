@@ -59,17 +59,11 @@ coverage:
 	coverage html
 	open htmlcov/index.html
 
+docs: outfile=/tmp/readme-errors
 docs:
-	@outfile=/tmp/readme-errors; \
-	if command -v rst2html >/dev/null 2>&1; then \
-		rst2html README.rst > /dev/null 2> $${outfile}; \
-	elif command -v rst2html.py >/dev/null 2>&1; then \
-		rst2html.py README.rst > /dev/null 2> $${outfile}; \
-	else \
-		python -c "from docutils.core import publish_file; import sys; publish_file('README.rst', sys.stdout, writer_name='html')" > /dev/null 2> $${outfile}; \
-	fi; \
-	cat $${outfile}; \
-	test 0 -eq `cat $${outfile} | wc -l`
+	docutils README.rst > /dev/null 2> ${outfile}
+	cat ${outfile}
+	test 0 -eq `cat ${outfile} | wc -l`
 
 tag: TAG:=v${VERSION}
 tag: exit_code=$(shell git ls-remote ${GIT_REMOTE_NAME} | grep -q tags/${TAG}; echo $$?)
