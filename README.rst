@@ -208,7 +208,7 @@ Setting up all Python versions
     sudo apt-get -y install software-properties-common
     sudo add-apt-repository ppa:deadsnakes/ppa
     sudo apt-get update
-    for version in 3.9 3.10 3.11 3.12 3.13; do
+    for version in 3.10 3.11 3.12 3.13 3.14; do
       py=python$version
       if ! which ${py}; then
         sudo apt-get -y install ${py} ${py}-dev
