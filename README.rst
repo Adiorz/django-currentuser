@@ -75,6 +75,14 @@ different, unsupported version, `DJANGO_CURRENTUSER_USE_UNSUPPORTED_DJANGO` allo
 Release Notes
 -------------
 
+* 0.10.0
+
+  * by @adiorz
+  * add support for Python 3.14
+  * add support for Django 6.0
+  * drop support for Python 3.9
+  * drop support for Django 4.2 and 5.1
+
 * 0.9.0
 
   * by @bartvanandel
