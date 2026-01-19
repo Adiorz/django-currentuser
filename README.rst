@@ -81,7 +81,7 @@ Release Notes
   * add support for Python 3.14
   * add support for Django 6.0
   * drop support for Python 3.9
-  * drop support for Django 4.2 and 5.1
+  * drop support for Django 5.1
 
 * 0.9.0
 
