@@ -31,7 +31,7 @@ classifiers = [
 "Bug Tracker" = "https://github.com/zsoldosp/django-currentuser/issues"
 
 [tool.setuptools]
-packages = ["django_currentuser"]
+packages = ["django_currentuser", "django_currentuser.db", "django_currentuser.db.models"]
 
 [tool.setuptools.dynamic]
 version = { attr = "django_currentuser.__version__" }
