@@ -61,7 +61,7 @@ coverage:
 
 docs: outfile=/tmp/readme-errors
 docs:
-	rst2html.py README.rst > /dev/null 2> ${outfile}
+	rst2html README.rst > /dev/null 2> ${outfile}
 	cat ${outfile}
 	test 0 -eq `cat ${outfile} | wc -l`
 
